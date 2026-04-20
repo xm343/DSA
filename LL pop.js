@@ -61,7 +61,7 @@ class linkedList{
         this.tail = pre 
         this.tail.next = null
         this.length--
-        if(temp.length==0){
+        if(this.length===0){
             this.head = null
             this.tail = null
         }
