@@ -13,20 +13,21 @@ class doublyLinkedList {
     this.tail = newNode;
     this.length = 1;
   }
-  shift(){
-    if(this.length===0) return undefined
+  set(index,value){
+    let temp = this.get(index)
+    if(temp){
+        temp.value = value
+        return true
+    }
+    return false
+  }
+  get(index){
+    if(index < 0 || index > this.length-1) return undefined
     let temp = this.head
-    if(this.length===1){
-        this.head = null
-        this.tail = null
+    for(let i=0; i<index; i++){
+        temp = temp.next
     }
-    else{
-        this.head = this.head.next
-        this.head.prev = null
-        temp.next = null
-    }
-    this.length--
-    return temp
+    return temp 
   }
   push(value) {
     const newNode = new Node(value);
@@ -55,5 +56,5 @@ class doublyLinkedList {
 const newList = new doublyLinkedList(1)
 newList.push(2)
 newList.push(3)
-newList.shift()
+console.log(newList.set(1,56))
 newList.print()

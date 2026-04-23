@@ -22,8 +22,9 @@ class doublyLinkedList {
       this.tail.next = newNode;
       newNode.prev = this.tail;
       this.tail = newNode;
-      this.length++;
+      
     }
+    this.length++;
     return this;
   }
   print() {
