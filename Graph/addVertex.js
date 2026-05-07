@@ -10,3 +10,6 @@ class Graph{
         return false
     }
 }
+
+const myGraph = new Graph
+console.log(myGraph.addVertex('A'))
