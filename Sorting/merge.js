@@ -22,12 +22,6 @@ function merge(array1, array2){
     }
     return combined
 }
-function mergeSort(arr){
-    if(arr.length===1) return arr
-    let mid = Math.floor(arr.length/2)
-    let left = arr.slice(0,mid)
-    let right = arr.slice(mid)
-    return merge(mergeSort(left), mergeSort(right))
-}
-let array = [3,4,5,2,6,7,8,1,9]
-console.log(mergeSort(array))
+let arr1 = [1,2,3,7,8]
+let arr2 = [4,5,6,9,10]
+console.log(merge(arr1,arr2))
